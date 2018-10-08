@@ -27,8 +27,8 @@ final class ImageViewerPresentationTransition: NSObject, UIViewControllerAnimate
         fadeView.alpha = 0.0
         
         toView.frame = containerView.bounds
-        toView.isHidden = true
-        fromImageView.isHidden = true
+//         toView.isHidden = true
+//        fromImageView.alpha = 0.0
         
         containerView.addSubview(toView)
         containerView.addSubview(fadeView)
@@ -44,6 +44,7 @@ final class ImageViewerPresentationTransition: NSObject, UIViewControllerAnimate
             fadeView.alpha = 1.0
         }, completion: { _ in
             toView.isHidden = false
+            toView.alpha = 1.0
             fadeView.removeFromSuperview()
             imageView.removeFromSuperview()
             transitionContext.completeTransition(true)
