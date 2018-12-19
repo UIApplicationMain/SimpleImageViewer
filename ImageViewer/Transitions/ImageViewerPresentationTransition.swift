@@ -28,7 +28,6 @@ final class ImageViewerPresentationTransition: NSObject, UIViewControllerAnimate
         
         toView.frame = containerView.bounds
         toView.alpha = 0.0
-//        fromImageView.alpha = 0.0
         
         containerView.addSubview(toView)
         containerView.addSubview(fadeView)
